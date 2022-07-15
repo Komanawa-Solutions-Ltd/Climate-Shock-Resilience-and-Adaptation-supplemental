@@ -2,8 +2,9 @@
 this script contains 5 main functions to access the datasets:
 
 * get_1yr_data:
-    This function get the random suite of 1yr storylines with BASGRA results for
+    This function get the random suite of 1yr storylines with BASGRA results.
 * get storyline:
+    get the storyline for a given 1yr index.
 * create_nyr_suite:
     this resamples the random suite of BASGRA results in accordance to their probability to make 1 or more year
     synthetic timeseries.  These data can be large and therefore need to be re-calculated by the end user
