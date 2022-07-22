@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from scipy.interpolate import interp1d
 
-
+#todo this is wrong!!!!, need to re-calculate the data including all of the scenarios (100/storyline)
 def calc_non_exceedence_prob(pasture_growth, mod: bool, site: str, mode: str, pg_in_tons=False):
     """
     calculate the probability of having as much or more pasture production as the specified data
