@@ -16,6 +16,13 @@ this script contains 5 main functions to access the datasets:
 created matt_dumont 
 on: 15/07/22
 """
+
+# todo need to re-run probability across full suite otherwise it is wrong.
+# todo need to update the get data to get mean data and get full dataset, both in this repo and in the final repo
+# todo consider compression (which pandas handles natively)
+# todo need to fix create_nyr (just check)
+
+
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -23,10 +30,12 @@ import psutil
 import gc
 from zipfile import ZipFile
 
-
 def get_1yr_data(bad_irr=True, good_irr=True, farm_mods=False):
+    raise NotImplementedError # todo pull the full suite in!!
+def get_mean_1yr_data(bad_irr=True, good_irr=True, farm_mods=False):
     """
-    get the raw random 1 year data.  Note  that the distribution of these data does not match the distribution
+    get the raw random 1 year data as the mean of each storyline.
+    Note  that the distribution of these data does not match the distribution
     of 1 year impacts as some storylines are more probable than others.
     :param bad_irr: bool if True return the data from the worse than median irrigation restriction suite
     :param good_irr: bool if True return the data from the better than median irrigation restriction suite
